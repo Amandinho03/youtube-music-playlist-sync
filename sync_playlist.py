@@ -38,7 +38,7 @@ if __name__ == '__main__':
     videos = get_playlist_items(youtube, PLAYLIST_ID)
     
     # Write to CSV
-    with open('playlist_export.csv', 'w', newline='', encoding='utf-8') as f:
+    with open('playlist_export.csv', 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.DictWriter(f, fieldnames=['Title', 'Video ID', 'Channel', 'Added At'])
         writer.writeheader()
         writer.writerows(videos)
